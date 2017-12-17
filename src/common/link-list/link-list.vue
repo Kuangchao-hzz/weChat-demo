@@ -1,6 +1,9 @@
 <template>
-  <div class="link-list base-padding">
-    <div class="list__group" :class="{'list__group_b': border}">
+  <div class="link-list base-padding"  :class="{'list__group_b': border === 'root' ? true : false}">
+    <div class="list__group" :class="{'list__group_b': border === 'child' ? true : false}">
+      <div class="icon-left">
+        <slot name="left"></slot>
+      </div>
       <p class="title">{{title}}</p>
       <div class="badge">
         <slot name="badge"></slot>
@@ -23,9 +26,12 @@
         default: '标题'
       },
       border: {
-        type: Boolean,
-        default: false
+        type: String,
+        default: ''
       }
+    },
+    mounted () {
+
     }
   }
 </script>
@@ -34,6 +40,8 @@
   @import "~assets/css/mixin"
 
   .link-list
+    &.list__group_b
+      border_b_line(1px)
     .list__group
       width 100%
       padding-top 1.5rem !important
@@ -43,6 +51,9 @@
       display table
       >*
         display table-cell
+        vertical-align middle
+        &.icon-left
+          width 2rem
         &.badge
           text-align right
         &.icon-right

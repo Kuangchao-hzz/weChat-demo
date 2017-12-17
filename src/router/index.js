@@ -34,6 +34,11 @@ export default new Router({
       path: '/orderIndex',
       name: 'orderIndex',
       component: resolve => require(['../Views/OrderIndex/orderIndex.vue'], resolve)
+    },
+    {
+      path: '/adminIndex',
+      name: 'adminIndex',
+      component: resolve => require(['../Views/AdminIndex/adminIndex.vue'], resolve)
     }
   ]
 })

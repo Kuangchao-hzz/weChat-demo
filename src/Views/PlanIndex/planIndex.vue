@@ -11,17 +11,17 @@
       <mt-tab-item id="back">已驳回</mt-tab-item>
     </mt-navbar>
     <mt-tab-container v-model="selected" swipeable>
-      <mt-tab-container-item id="fight">
-        全部
+      <mt-tab-container-item id="all">
+        <none-data title="暂未发现计划"></none-data>
       </mt-tab-container-item>
-      <mt-tab-container-item id="hotel">
-        酒店
+      <mt-tab-container-item id="audit">
+        <none-data title="暂未发现已审批的计划"></none-data>
       </mt-tab-container-item>
-      <mt-tab-container-item id="train">
-        火车票
+      <mt-tab-container-item id="unAudit">
+        <none-data></none-data>
       </mt-tab-container-item>
-      <mt-tab-container-item id="other">
-        其它
+      <mt-tab-container-item id="back">
+        <none-data></none-data>
       </mt-tab-container-item>
     </mt-tab-container>
   </div>

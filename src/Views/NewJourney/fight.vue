@@ -82,9 +82,9 @@
       placeTransformFn () {
         this.placeTransform = !this.placeTransform
       },
+      // 判断需要触发的是单程的时间还是返程的时间 'departure' : 'oneWayDeparture'
       handleChange (value) {
-        console.log(this.departure)
-        this.departure === 'out' ? this.fightDepartureTime = value : this.fightOneWayDepartureTime = value
+        this.departure === 'departure' ? this.fightDepartureTime = value : this.fightOneWayDepartureTime = value
       }
     },
     watch: {
