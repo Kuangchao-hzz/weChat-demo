@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
@@ -9,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/mainIndex'
     },
     {
       path: '/login',
@@ -25,6 +24,26 @@ export default new Router({
       path: '/NewJourney',
       name: 'NewJourney',
       component: resolve => require(['../Views/NewJourney/index.vue'], resolve)
+    },
+    {
+      path: '/planIndex',
+      name: 'planIndex',
+      component: resolve => require(['../Views/PlanIndex/planIndex.vue'], resolve)
+    },
+    {
+      path: '/orderIndex',
+      name: 'orderIndex',
+      component: resolve => require(['../Views/OrderIndex/orderIndex.vue'], resolve)
+    },
+    {
+      path: '/adminIndex',
+      name: 'adminIndex',
+      component: resolve => require(['../Views/AdminIndex/adminIndex.vue'], resolve)
+    },
+    {
+      path: '/toFightList',
+      name: 'toFightList',
+      component: resolve => require(['../Views/ToFightList/toFightList.vue'], resolve)
     }
   ]
 })

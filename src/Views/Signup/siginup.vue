@@ -49,7 +49,7 @@
           apiSignup(params).then(res => {
             this.loading = false
             if (res.code === ERR_CODE_OK) {
-              console.log(res)
+              this.$router.push('/mainIndex')
             } else {
               this.$message(res.msg)
             }

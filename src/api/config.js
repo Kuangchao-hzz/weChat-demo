@@ -1,12 +1,16 @@
 export const commonParams = {
-  loginType: 0
+  _: 1513581723430
 }
 
 export const options = {
-  param: 'jsonpCallback'
+  param: 'callback',
+  name: 'callback'
 }
+export const $URL = 'https://m.emserve.cn/'
 // 成功
 export const ERR_CODE_OK = '0'
+// 登录超时
+export const ERR_CODE_OVERTIME = '99'
 // 账号冻结
 export const ERR_SIGNUP_FROST = '100000022'
 // 账号尚未通过个人验证并设置用户密码

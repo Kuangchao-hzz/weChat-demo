@@ -1,7 +1,7 @@
 <template>
   <div class="newJourney-container">
-    <mt-header title="新增行程" @click.native="$router.go(-1)">
-      <icon slot="left" type="ion ion-chevron-left" size="1.5"></icon>
+    <mt-header title="新增行程">
+      <icon slot="left" type="ion ion-chevron-left" size="1.5"  @click.native="$router.go(-1)"></icon>
     </mt-header>
     <mt-navbar v-model="selected">
       <mt-tab-item id="fight">机票</mt-tab-item>
@@ -36,8 +36,7 @@
       }
     },
     computed: {},
-    methods: {
-    },
+    methods: {},
     components: {
       Fight
     }

@@ -27,11 +27,7 @@
       </div>
     </div>
     <div class="journey_cont_group">
-      <div class="none">
-        <img src="../../assets/images/journey_none.png" width="124" height="124">
-        <p>暂未发现行程</p>
-        <p>您可以通过购买或新增行程来告诉我</p>
-      </div>
+      <none-data></none-data>
     </div>
   </div>
 </template>
@@ -74,16 +70,4 @@
         &.active
           .list__label, .list__text
             color $font_color_active
-    .journey_cont_group
-      .none
-        padding-top 4rem
-        text-align center
-        p:nth-of-type(1)
-          margin-top 1rem
-          font-size $font_size_p_s
-          color $font_color_default
-        p:nth-of-type(2)
-          line-height 2.4rem
-          font-size $font_size_default
-          color $font_color_desc
 </style>
