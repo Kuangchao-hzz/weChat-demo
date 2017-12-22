@@ -44,6 +44,11 @@ export default new Router({
       path: '/toFightList',
       name: 'toFightList',
       component: resolve => require(['../Views/ToFightList/toFightList.vue'], resolve)
+    },
+    {
+      path: '/carIndex',
+      name: 'carIndex',
+      component: resolve => require(['../Views/carIndex/carIndex.vue'], resolve)
     }
   ]
 })
