@@ -11,6 +11,7 @@
       </div>
       <mt-picker :slots="slots" @change="onValuesChange" class="base-padding"></mt-picker>
     </mt-popup>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -21,7 +22,7 @@
       return {
         popupVisible: false,
         pickerValue: '',
-        pageTitle: '',
+        pageTitle: '用车',
         timeDate: [],
         slots: []
       }
@@ -87,8 +88,8 @@
         for (let i = 0; i < 60; i++) {
           let _minute = i < 10 ? '0' + i : i
           // 如果等于当前分钟, 则默认显示
-          if (moment(cutDate).minute() === _minute) {
-            slotMinute.defaultIndex = _minute
+          if (moment(cutDate).minute() === i + 1) {
+            slotMinute.defaultIndex = i + 1
           }
           slotMinute.values.push(`${_minute}分`)
         }

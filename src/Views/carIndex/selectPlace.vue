@@ -10,7 +10,7 @@
         <small>[当前]</small>
         <p>普罗娜商务广场</p>
       </div>
-      <div class="user__car_to">
+      <div class="user__car_to" @click="selectPlaceFn">
         <div class="dot"></div>
         <p class="color-default">你要去哪儿</p>
       </div>
@@ -27,6 +27,12 @@
     },
     computed: {},
     methods: {
+      // 选择地址后的函数
+      selectPlaceFn () {
+        this.$router.push({
+          path: '/carIndex/placeList'
+        })
+      },
       subScribe () {
         this.$emit('subScribe')
       }
