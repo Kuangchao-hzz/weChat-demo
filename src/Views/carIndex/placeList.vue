@@ -23,8 +23,8 @@
       <div class="place-to base-padding">
         <icon type="ion-home" size="2"></icon>
         <div class="title">
-          <p>家</p>
-          <small>点击设置</small>
+          <p>公司</p>
+          <small>上海浦东国际机场</small>
         </div>
       </div>
     </div>
@@ -76,6 +76,7 @@
    height 100%
    background #fff
    padding-top 4rem
+   box-sizing border-box
    position: fixed
    left 0
    top 0

@@ -59,6 +59,16 @@ export default new Router({
           path: 'myAddress',
           name: 'myAddress',
           component: resolve => require(['../Views/carIndex/myAddress.vue'], resolve)
+        },
+        {
+          path: 'carType',
+          name: 'carType',
+          component: resolve => require(['../Views/carIndex/carType.vue'], resolve)
+        },
+        {
+          path: 'carDetail',
+          name: 'carDetail',
+          component: resolve => require(['../Views/carIndex/carDetail.vue'], resolve)
         }
       ]
     }
