@@ -69,6 +69,16 @@ export default new Router({
           path: 'carDetail',
           name: 'carDetail',
           component: resolve => require(['../Views/carIndex/carDetail.vue'], resolve)
+        },
+        {
+          path: 'orderAbnormal',
+          name: 'orderAbnormal',
+          component: resolve => require(['../Views/carIndex/orderAbnormal.vue'], resolve)
+        },
+        {
+          path: 'waitOrder',
+          name: 'waitOrder',
+          component: resolve => require(['../Views/carIndex/waitOrder.vue'], resolve)
         }
       ]
     }

@@ -62,9 +62,18 @@
       <p>2. 司机在开始服务后订单不可取消</p>
       <p>3. 订单不支持修改</p>
     </div>
-    <div class="detail-submit">
+    <div class="detail-submit" @click="subScribe">
       叫车
     </div>
+    <mt-popup v-model="popupVisible" position="bottom">
+      <div class="sl__nav base-padding">
+        <span @click="closeTime">取消</span>
+        <span>确定</span>
+      </div>
+      <div class="apply-method">
+        个人支付
+      </div>
+    </mt-popup>
   </div>
 </template>
 <script>
@@ -72,7 +81,8 @@
     name: 'select-place',
     data () {
       return {
-        pageTitle: '用车'
+        pageTitle: '用车',
+        popupVisible: false
       }
     },
     computed: {},
@@ -84,7 +94,10 @@
         })
       },
       subScribe () {
-        this.$emit('subScribe')
+        this.popupVisible = true
+      },
+      closeTime () {
+        this.popupVisible = false
       }
     }
   }
@@ -162,6 +175,11 @@
       font-size 22px
       padding 15px 0
       color #fff
+    .apply-method
+      text-align center
+      font-size 22px
+      margin 30px 0
+      padding 20px 0
     .color-default
       color $font_color_desc !important
 </style>

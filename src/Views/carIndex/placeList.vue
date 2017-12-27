@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="gutter_line"></div>
-    <div class="place-list-group base-padding">
+    <div class="place-list-group base-padding" @click="$router.push({path: '/carIndex/carType'})">
       <icon type="ion ion-ios-location" size="2"></icon>
       <div class="item">
         <p class="title">

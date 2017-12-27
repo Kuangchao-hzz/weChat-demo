@@ -1,7 +1,7 @@
 <template>
   <div class="car-index-container">
     <mt-header :title="pageTitle">
-      <icon slot="left" type="ion ion-chevron-left" size="1.5"></icon>
+      <icon slot="left" type="ion ion-chevron-left" size="1.5" @click.native="$router.go(-1)"></icon>
     </mt-header>
     <select-place @subScribe="subScribeFn"></select-place>
     <mt-popup v-model="popupVisible" position="bottom">

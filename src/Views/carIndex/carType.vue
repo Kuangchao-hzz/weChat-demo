@@ -7,7 +7,7 @@
     </mt-swipe>
     <p class="car__title">预计时长XX分钟，行驶XXX公里</p>
     <div class="car_type_group">
-      <div class="car__list">
+      <div class="car__list" @click="$router.push({path: '/carIndex/carDetail'})">
         <div class="car__logo"><img src="./car02.png" height="100" width="100"/></div>
         <div class="car__name">滴滴专车</div>
         <div class="car__price">￥52</div>
