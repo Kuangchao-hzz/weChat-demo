@@ -71,7 +71,11 @@
         <span>确定</span>
       </div>
       <div class="apply-method">
-        个人支付
+        <div class="item base-padding">
+          个人支付
+        <icon type="ion-checkmark-circled" size="2" style="color: blueviolet"></icon>
+        </div>
+        <div class="item base-padding">企业支付</div>
       </div>
     </mt-popup>
   </div>
@@ -107,15 +111,6 @@
   @import "~assets/css/mixin"
 
   .car-detail-container
-    width 100%
-    height 100%
-    padding-top 4rem
-    background #eaf0f3
-    box-sizing border-box
-    position: fixed
-    left 0
-    top 0
-    z-index 999
     .popup__group
       padding 0 1rem
       background #fff
@@ -176,10 +171,15 @@
       padding 15px 0
       color #fff
     .apply-method
-      text-align center
-      font-size 22px
-      margin 30px 0
-      padding 20px 0
+      font-size 18px
+      .item
+        padding-top 2rem
+        padding-bottom  2rem
+        display flex
+        justify-content space-between
+        align-items center
+        &:nth-child(1)
+          border-bottom 1px #ddd solid
     .color-default
       color $font_color_desc !important
 </style>

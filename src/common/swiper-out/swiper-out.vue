@@ -6,7 +6,7 @@
          @touchend="touchend"
          :style="sliderSyl"
     >
-      <div class="car__item_title" ref="carTitle">
+      <div class="car__item_title" ref="carTitle" @click="clickFn">
         <p>张路 15045461818</p>
         <p>上海市宝山区罗店镇 罗南新村美罗家园</p>
       </div>
@@ -37,6 +37,9 @@
     },
     computed: {},
     methods: {
+      clickFn () {
+        this.$emit('clickFn')
+      },
       touchstart (ev) {
         ev = ev || event
         if (ev.touches.length === 1) {

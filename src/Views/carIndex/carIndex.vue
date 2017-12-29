@@ -11,11 +11,16 @@
       </div>
       <mt-picker :slots="slots" @change="onValuesChange" class="base-padding"></mt-picker>
     </mt-popup>
-    <router-view></router-view>
+    <scroll class="page__container" v-show="handlePageRouter">
+      <div>
+        <router-view></router-view>
+      </div>
+    </scroll>
   </div>
 </template>
 <script>
   import SelectPlace from './selectPlace.vue'
+  import Scroll from '../../common/scroll/scroll'
   import * as util from 'utils/utils'
   export default {
     data () {
@@ -31,7 +36,13 @@
       this.slots = this.generatePopupTimeDate()
     },
     computed: {
-
+      handlePageRouter () {
+        console.log(this.$route)
+        if (this.$route.name === 'carIndex') {
+          return false
+        }
+        return true
+      }
     },
     methods: {
       onValuesChange (vue, val) {
@@ -98,7 +109,8 @@
       }
     },
     components: {
-      SelectPlace
+      SelectPlace,
+      Scroll
     }
   }
 </script>
@@ -120,9 +132,19 @@
         color $font_color_default
         border-bottom 1px #f60 solid
         span
-          padding 1rem
+          padding 1.5rem 0
           &:nth-child(2)
             color #f60
     .picker-slot-center:nth-child(1), .picker-slot-center:nth-child(2)
       display none
+    .page__container
+      width 100%
+      overflow hidden
+      background #ddd
+      position: fixed
+      left 0
+      top 4rem
+      bottom 0
+      >div
+        min-height 100%
 </style>

@@ -22,6 +22,10 @@
         <icon slot="icon" type="ion ion-home" size="2"></icon>
         管理
       </mt-tab-item>
+      <mt-tab-item id="/carIndex" @click.native="goPage">
+        <icon slot="icon" type="ion ion-home" size="2"></icon>
+        用车
+      </mt-tab-item>
     </mt-tabbar>
   </div>
 </template>

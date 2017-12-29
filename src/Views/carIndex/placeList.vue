@@ -56,6 +56,40 @@
         </div>
       </div>
     </div>
+    <div class="place-list-group base-padding">
+      <icon type="ion ion-ios-location" size="2"></icon>
+      <div class="item">
+        <p class="title">
+          <span class="tag">当前</span>
+          普罗娜商务广场
+        </p>
+        <p class="small">普陀区金沙江路靠近普罗娜商务广场</p>
+        <div class="exit">
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+        </div>
+      </div>
+    </div>
+    <div class="place-list-group base-padding">
+      <icon type="ion ion-ios-location" size="2"></icon>
+      <div class="item">
+        <p class="title">
+          <span class="tag">当前</span>
+          普罗娜商务广场
+        </p>
+        <p class="small">普陀区金沙江路靠近普罗娜商务广场</p>
+        <div class="exit">
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+          <div class="exit-item">北门</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -72,14 +106,7 @@
   @import "~assets/css/mixin"
 
  .place-list-container
-   width 100%
-   height 100%
    background #fff
-   padding-top 4rem
-   box-sizing border-box
-   position: fixed
-   left 0
-   top 0
    .select_search_group
      display flex
      justify-content space-between

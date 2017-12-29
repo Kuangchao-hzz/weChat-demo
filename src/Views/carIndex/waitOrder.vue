@@ -1,5 +1,5 @@
 <template>
-	<div class="wait-order-container">
+  <div class="wait-order-container">
     <div class="order__group base-padding">
       <div class="cont">
         <p>司机已将订单改派</p>
@@ -13,16 +13,15 @@
 </template>
 
 <script>
-    export default {
-        name: "wait-order"
-    }
+  export default {
+    name: 'wait-order'
+  }
 </script>
 
 <style lang="stylus" type="text/stylus" scoped>
   .wait-order-container
     width 100%
     height 100%
-    padding-top 4rem
     background #eaf0f3
     box-sizing border-box
     position: fixed
@@ -35,7 +34,7 @@
         background #fff
         border-radius 4px
         overflow hidden
-        box-shadow 3px 3px 5px rgba(0,0,0, .2)
+        box-shadow 3px 3px 5px rgba(0, 0, 0, .2)
         p
           padding 20px 0
           text-align center
