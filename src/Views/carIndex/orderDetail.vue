@@ -46,6 +46,21 @@
         实际时长XXX分钟，行驶XXX公里
       </div>
     </div>
+    <div class="list">
+      <div class="item">订单号</div>
+      <p class="item">
+        <span>2549815544161528</span>
+        <small>2017/12/18 15:30</small>
+      </p>
+    </div>
+    <div class="list">
+      <div class="item">支付方式</div>
+      <p class="item">个人支付</p>
+    </div>
+    <div class="list">
+      <div class="item">支付时间</div>
+      <p class="item">2017/12/18 15:30</p>
+    </div>
   </div>
 </template>
 
@@ -56,6 +71,9 @@
 </script>
 
 <style lang="stylus" type="text/stylus" scoped>
+  @import "~assets/css/variable"
+  @import "~assets/css/mixin"
+
  .order-detail-container
     .order-title
       font-size 20px
@@ -82,6 +100,7 @@
         color #43a0ba
         border-radius 2px
     .order-info
+      margin-bottom 15px
       .user
         padding 1rem
         display flex
@@ -126,4 +145,19 @@
         padding 2rem 0
         background #fff
         text-align center
+    .list
+      display flex
+      justify-content space-between
+      align-items center
+      padding 15px
+      background #fff
+      border-bottom 1px #ddd solid
+      .item
+        font-size 1.4rem
+        p, small
+          display block
+          text-align right
+          line-height 24px
+        small
+          color $font_color_bg
 </style>

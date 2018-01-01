@@ -1,8 +1,9 @@
 <template>
   <div class="car-index-container">
-    <mt-header :title="pageTitle">
+    <mt-header :title="pageTitle" style="background: #46a1bb">
       <icon slot="left" type="ion ion-chevron-left" size="1.5" @click.native="$router.go(-1)"></icon>
     </mt-header>
+    <div id="mapContainer" class="map-container"></div>
     <select-place @subScribe="subScribeFn"></select-place>
     <mt-popup v-model="popupVisible" position="bottom">
       <div class="sl__nav base-padding">
@@ -22,6 +23,8 @@
   import SelectPlace from './selectPlace.vue'
   import Scroll from '../../common/scroll/scroll'
   import * as util from 'utils/utils'
+  /* eslint-disable no-unused-vars */
+  let map = null
   export default {
     data () {
       return {
@@ -34,6 +37,12 @@
     },
     mounted () {
       this.slots = this.generatePopupTimeDate()
+      this.$nextTick(() => {
+        map = new AMap.Map('mapContainer', {
+          zoom: 10,
+          center: [116.39, 39.9]
+        })
+      })
     },
     computed: {
       handlePageRouter () {
@@ -147,4 +156,10 @@
       bottom 0
       >div
         min-height 100%
+    #mapContainer
+      width 100%
+      position absolute
+      top 0
+      bottom 0
+
 </style>

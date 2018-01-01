@@ -63,7 +63,7 @@
       <p>3. 订单不支持修改</p>
     </div>
     <div class="detail-submit" @click="subScribe">
-      叫车
+      <div class="btn">叫车</div>
     </div>
     <mt-popup v-model="popupVisible" position="bottom">
       <div class="sl__nav base-padding">
@@ -71,25 +71,32 @@
         <span>确定</span>
       </div>
       <div class="apply-method">
-        <div class="item base-padding">
+        <div class="item base-padding" :class="{'active': checkmark}" @click="checkmark = true">
           个人支付
-        <icon type="ion-checkmark-circled" size="2" style="color: blueviolet"></icon>
+        <icon type="ion-checkmark-circled" size="2.2" style="color: blueviolet"></icon>
         </div>
-        <div class="item base-padding">企业支付</div>
+        <div class="item base-padding" :class="{'active': !checkmark}" @click="checkmark = false">
+          企业支付
+          <icon type="ion-checkmark-circled" size="2.2" style="color: blueviolet"></icon>
+        </div>
       </div>
     </mt-popup>
   </div>
 </template>
 <script>
   export default {
-    name: 'select-place',
     data () {
       return {
         pageTitle: '用车',
-        popupVisible: false
+        popupVisible: false,
+        checkmark: true
       }
     },
-    computed: {},
+    computed: {
+      checkmarkHandle () {
+        return this.checkmark
+      }
+    },
     methods: {
       // 选择地址后的函数
       selectPlaceFn () {
@@ -162,14 +169,15 @@
         font-size 16px
         line-height 16px
     .detail-submit
-      width 90%
-      background #46a1bb
-      margin 0 auto
-      margin-top 20px
-      text-align center
-      font-size 22px
-      padding 15px 0
-      color #fff
+      padding 20px 0
+      .btn
+        width 90%
+        background #46a1bb
+        margin 0 auto
+        text-align center
+        font-size 22px
+        padding 15px 0
+        color #fff
     .apply-method
       font-size 18px
       .item
@@ -178,6 +186,16 @@
         display flex
         justify-content space-between
         align-items center
+        position relative
+        span
+          display none !important
+          position absolute
+          top 50%
+          right 1.5rem
+          transform translateY(-50%)
+        &.active
+          span
+            display block !important
         &:nth-child(1)
           border-bottom 1px #ddd solid
     .color-default

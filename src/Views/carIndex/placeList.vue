@@ -127,7 +127,7 @@
        line-height 2rem
        font-size $font_size_p_s
        border-left 1px #ddd solid
-       color $font_color_default
+       color $font_color_btn
      .search__cont
        width 100%
        display flex
